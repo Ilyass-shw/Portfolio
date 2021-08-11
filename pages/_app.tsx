@@ -1,25 +1,21 @@
 import { AppProps } from "next/dist/next-server/lib/router/router";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`;
-
-const theme = {
-  colors: {
-    primary: "#0070f3",
-  },
-};
+import { ThemeProvider } from "styled-components";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { GlobalStyle } from "../theme/globalStyle";
+import { darkTheme, lightTheme } from "../theme/themes";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [storedTheme, setStoredTheme] = useLocalStorage();
+
+  const themeSwitcher = () => {
+    storedTheme === "light" ? setStoredTheme("dark") : setStoredTheme("light");
+  };
+
   return (
     <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={storedTheme === "dark" ? darkTheme : lightTheme}>
+        <GlobalStyle />
+        <button onClick={themeSwitcher}>koko</button>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
