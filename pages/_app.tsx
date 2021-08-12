@@ -5,6 +5,7 @@ import { GlobalStyle } from "../theme/globalStyle";
 import { darkTheme, lightTheme } from "../theme/themes";
 import { RiMoonClearLine } from "react-icons/Ri";
 import { HiSun } from "react-icons/Hi";
+import { ThemeIcon } from "../components/ThemeIcon/ThemeIcon.component";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [storedTheme, setStoredTheme] = useLocalStorage();
@@ -18,9 +19,13 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={storedTheme === "dark" ? darkTheme : lightTheme}>
         <GlobalStyle />
         {storedTheme === "dark" ? (
-          <RiMoonClearLine id="ThemeIcon" onClick={themeSwitcher} />
+          <ThemeIcon>
+            <RiMoonClearLine onClick={themeSwitcher} />
+          </ThemeIcon>
         ) : (
-          <HiSun id="ThemeIcon" onClick={themeSwitcher} />
+          <ThemeIcon>
+            <HiSun onClick={themeSwitcher} />
+          </ThemeIcon>
         )}
         <Component {...pageProps} />
       </ThemeProvider>
