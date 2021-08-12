@@ -7,11 +7,6 @@ export default function Home() {
     <div>
       <Head>
         <title>Ilyass Fourkani</title>
-        <meta name="description" content="Portfolio" />
-        <link
-          rel="icon"
-          href="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairDreads01&accessoriesType=Prescription02&hairColor=BrownDark&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Default&eyebrowType=RaisedExcitedNatural&mouthType=Default&skinColor=Light"
-        />
       </Head>
 
       <main>

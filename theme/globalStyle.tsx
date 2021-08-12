@@ -29,4 +29,24 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     }
 
     `}
+    #ThemeIcon{
+    display: inline-flex;
+    width: 1.6rem;
+    height: auto;
+    position: absolute;
+    top: 1.65rem;
+    right: 2rem;
+    cursor: pointer;
+
+    @media (min-width: ${(p) => p.theme.screens.sm}) {
+    top: 3.4rem;
+    right: 3rem;
+  }
+    @media (min-width: ${(p) => p.theme.screens.md}) {
+    right: 6rem;
+  }
+    @media (min-width: ${(p) => p.theme.screens.lg}) {
+    right: 8rem;
+  }
+    }
 `;
