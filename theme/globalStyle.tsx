@@ -29,24 +29,37 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     }
 
     `}
+
     #ThemeIcon{
     display: inline-flex;
     width: 1.6rem;
     height: auto;
     position: absolute;
-    top: 1.65rem;
+    top: 3.5rem;
     right: 2rem;
     cursor: pointer;
 
     @media (min-width: ${(p) => p.theme.screens.sm}) {
-    top: 3.4rem;
-    right: 3rem;
+    top: 3.6rem;
+    right: 15%;
   }
     @media (min-width: ${(p) => p.theme.screens.md}) {
-    right: 6rem;
+    top: 4.3rem;
   }
     @media (min-width: ${(p) => p.theme.screens.lg}) {
-    right: 8rem;
+    right: 10.5rem;
+    top: 4rem;
   }
+  }
+
+    main{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+
+    @media (max-width: ${(p) => p.theme.screens.lg}) {
+    align-items: center;
+    max-width: ${(p) => p.theme.screens.lg};
+    }
     }
 `;
