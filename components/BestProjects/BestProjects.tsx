@@ -11,7 +11,7 @@ import {
 const BestProjects: React.FC = () => {
   return (
     <Wrapper>
-      <Heading>Projects</Heading>
+      <Heading>Best Projects</Heading>
       <SubHeading>Collection of personal web dev projects</SubHeading>
       <Container>
         {projects.map((project) => (
