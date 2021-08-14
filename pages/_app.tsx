@@ -3,8 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { GlobalStyle } from "../theme/globalStyle";
 import { darkTheme, lightTheme } from "../theme/themes";
-import { RiMoonClearLine } from "react-icons/Ri";
-import { HiSun } from "react-icons/Hi";
+import { Icon } from "@iconify/react";
 import { ThemeIcon } from "../components/ThemeIcon/ThemeIcon.component";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -20,11 +19,15 @@ export default function App({ Component, pageProps }: AppProps) {
         <GlobalStyle />
         {storedTheme === "dark" ? (
           <ThemeIcon>
-            <RiMoonClearLine onClick={themeSwitcher} />
+            <Icon icon="bi:moon-stars" width="1" onClick={themeSwitcher} />
           </ThemeIcon>
         ) : (
           <ThemeIcon>
-            <HiSun onClick={themeSwitcher} />
+            <Icon
+              icon="akar-icons:sun-fill"
+              width="1"
+              onClick={themeSwitcher}
+            />
           </ThemeIcon>
         )}
         <Component {...pageProps} />

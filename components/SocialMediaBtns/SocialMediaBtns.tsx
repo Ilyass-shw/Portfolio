@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, SocialLinks } from "./SocialMediaBtns.component";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { Icon } from "@iconify/react";
 
 const SocialMediaBtns: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const SocialMediaBtns: React.FC = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <AiFillGithub />
+        <Icon icon="ant-design:github-outlined" />
       </Link>
       <Link
         href={"https://github.com/Ilyass-shw"}
@@ -19,7 +19,7 @@ const SocialMediaBtns: React.FC = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <AiFillLinkedin />
+        <Icon icon="bx:bxl-linkedin-square" />
       </Link>
     </SocialLinks>
   );

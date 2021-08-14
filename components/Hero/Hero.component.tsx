@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const HeroSection = styled.section`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   padding: 30px 0;
 
   @media (max-width: ${(p) => p.theme.screens.lg}) {
     flex-direction: column-reverse;
     align-items: center;
     padding: 10px;
+    width: 90%;
   }
 `;
 
@@ -17,7 +18,7 @@ export const Avatar = styled.img`
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  margin: 10px 0;
+  margin: 0 0 10px 5%;
 
   @media (max-width: ${(p) => p.theme.screens.sm}) {
     margin: 0;

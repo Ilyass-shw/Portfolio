@@ -2,14 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  padding: 10px 5%;
+  padding: 10px 0;
+  justify-content: center;
 
-  @media (max-width: 1024px) {
-    padding: 10px 40px;
-  }
-
-  @media (max-width: ${(p) => p.theme.screens.md}) {
-    padding: 10px;
+  @media (min-width: ${(p) => p.theme.screens.lg}) {
+    justify-content: start;
   }
 `;
 
@@ -18,7 +15,7 @@ export const ProfilBtn = styled.a<{ background: string; hover: string }>`
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-family: ${(p) => p.theme.fonts.heading};
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   border: none;
   border-radius: 5px;
   cursor: pointer;

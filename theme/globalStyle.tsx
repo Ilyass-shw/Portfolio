@@ -30,14 +30,9 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
     `}
 
-    main{
-    display: flex;
-    flex-direction: column;
-    padding: 30px 0;
-
-    @media (max-width: ${(p) => p.theme.screens.lg}) {
-    align-items: center;
-    max-width: ${(p) => p.theme.screens.lg};
-    }
+    main {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0;
     }
 `;
