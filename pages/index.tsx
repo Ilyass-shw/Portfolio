@@ -1,4 +1,5 @@
 import Head from "next/head";
+import BestProjects from "../components/BestProjects/BestProjects";
 import Header from "../components/Header/Header";
 import HeroSection from "../components/HeroSection/HeroSection";
 import Skills from "../components/Skills/Skills";
@@ -14,6 +15,7 @@ export default function Home() {
         <Header />
         <HeroSection/>
         <Skills/>
+        <BestProjects/>
       </main>
 
       <footer></footer>

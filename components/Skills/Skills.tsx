@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
     <SkillsSection>
       <SkillsContainer>
         <Heading>Skills</Heading>
-        <SubHeading>Technologies I've worked with</SubHeading>
+        <SubHeading>Technologies I&apos;ve worked with</SubHeading>
         <Container>
           {techSkills.map((tech) => (
             <TechWrapper key={tech.id}>

@@ -18,7 +18,7 @@ export const ThemeIcon = styled.p`
       top: 4.3rem;
     }
     @media (min-width: ${(p) => p.theme.screens.lg}) {
-      right: 10.5rem;
+      right: 18vw;
       top: 4rem;
     }
   }

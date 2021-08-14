@@ -20,10 +20,10 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="description" content="Portfolio" />
-          {/* <link
+          <link
             rel="icon"
             href="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairDreads01&accessoriesType=Prescription02&hairColor=BrownDark&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Default&eyebrowType=RaisedExcitedNatural&mouthType=Default&skinColor=Light"
-          /> */}
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
             rel="stylesheet"

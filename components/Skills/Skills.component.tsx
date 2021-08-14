@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const SkillsSection = styled.section`
   margin: 0 10%;
-  @media (min-width: ${(p) => p.theme.screens.lg}) {
+  /* @media (min-width: ${(p) => p.theme.screens.lg}) {
     margin: 0 5%;
-  }
+  } */
 `;
 
 export const SkillsContainer = styled.div`

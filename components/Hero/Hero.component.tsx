@@ -4,7 +4,8 @@ export const HeroSection = styled.section`
   display: flex;
   justify-content: flex-start;
   padding: 30px 0;
-
+  margin: 0 auto;
+ 
   @media (max-width: ${(p) => p.theme.screens.lg}) {
     flex-direction: column-reverse;
     align-items: center;

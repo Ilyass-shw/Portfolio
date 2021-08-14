@@ -16,7 +16,7 @@ export const HeaderNav = styled.nav<{ theme: ThemeType }>`
   }
   @media (min-width: ${(p) => p.theme.screens.lg}) {
     align-self: flex-start;
-    margin-inline-start: 13%;
+    margin-inline-start: 9%;
   }
 `;
 
