@@ -1,8 +1,7 @@
+import React from "react";
 import Head from "next/head";
-import BestProjects from "../components/BestProjects/BestProjects";
 import Header from "../components/Header/Header";
-import HeroSection from "../components/HeroSection/HeroSection";
-import Skills from "../components/Skills/Skills";
+import LayoutPreview from "../components/LayoutPreview/LayoutPreview";
 
 export default function Home() {
   return (
@@ -13,9 +12,7 @@ export default function Home() {
 
       <main>
         <Header />
-        <HeroSection />
-        <Skills />
-        <BestProjects />
+        <LayoutPreview/>
       </main>
 
       <footer></footer>
