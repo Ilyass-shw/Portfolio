@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
   return (
     <SkillsSection>
       <SkillsContainer>
-        <Heading>Skills</Heading>
+        <Heading id="Skills">Skills</Heading>
         <SubHeading>Technologies I&apos;ve worked with</SubHeading>
         <Container>
           {techSkills.map((tech) => (

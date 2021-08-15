@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
 
     html {
-        scroll-behaviour: smooth;
+        scroll-behavior: smooth;
     }
 
     body {
