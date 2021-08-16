@@ -5,8 +5,11 @@ export const Layouts = styled.div`
   justify-content: center;
   width: fit-content;
 `;
-export const Content = styled.div`
+export const BigScreenContent = styled.div`
   transform: translate(65px, -222px);
+`;
+export const MobileContent = styled.div`
+  transform: translate(12px,-209px);
 `;
 export const Layout = styled.div``;
 

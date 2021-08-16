@@ -2,9 +2,11 @@ import React from "react";
 import MobileLayout from "../../assets/Mobile.svg";
 import BigScreenLayout from "../../assets/BigScreen.svg";
 import filter from "../../assets/filter.gif";
+import PreviewAnimation from "../../assets/PreviewAnimation.gif";
 import {
   Layouts,
-  Content,
+  BigScreenContent,
+  MobileContent,
   Mobile,
   BigScreen,
 } from "./LayoutPreview.component";
@@ -20,9 +22,9 @@ const LayoutPreview: React.FC = () => {
           width={450}
           height={236}
         />
-        <Content>
+        <BigScreenContent>
           <Image src={filter} alt="Mobile Layout" width={320} height={179} />
-        </Content>
+        </BigScreenContent>
       </BigScreen>
       <Mobile>
         <Image
@@ -31,6 +33,14 @@ const LayoutPreview: React.FC = () => {
           width={140}
           height={230}
         />
+        <MobileContent>
+          <Image
+            src={PreviewAnimation}
+            alt="Mobile Layout"
+            width={115}
+            height={165}
+          />
+        </MobileContent>
       </Mobile>
     </Layouts>
   );
