@@ -6,7 +6,7 @@ export const Layouts = styled.div`
   width: fit-content;
 `;
 export const BigScreenContent = styled.div`
-  transform: translate(65px, -222px);
+  transform: translate(67px, -222px);
 `;
 export const MobileContent = styled.div`
   transform: translate(12px,-209px);

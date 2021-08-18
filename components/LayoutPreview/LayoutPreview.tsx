@@ -1,6 +1,7 @@
 import React from "react";
-import MobileLayout from "../../assets/Mobile.svg";
-import BigScreenLayout from "../../assets/BigScreen.svg";
+import DarkMobileLayout from "../../assets/DarkMobile.svg";
+import DarkBigScreenLayout from "../../assets/DarkBigScreen.svg";
+import WhiteBigScreenLayout from "../../assets/WhiteBigScreen.svg";
 import filter from "../../assets/filter.gif";
 import PreviewAnimation from "../../assets/PreviewAnimation.gif";
 import {
@@ -11,28 +12,54 @@ import {
   BigScreen,
 } from "./LayoutPreview.component";
 import Image from "next/image";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 const LayoutPreview: React.FC = () => {
+  const [storedTheme] = useLocalStorage();
+  const theme =
+    typeof window !== "undefined"
+      ? JSON.parse(localStorage.getItem("theme") as string)
+      : "dark";
+  console.log(theme);
+  console.log(storedTheme);
   return (
     <Layouts>
       <BigScreen>
-        <Image
-          src={BigScreenLayout}
-          alt="Mobile Layout"
-          width={450}
-          height={236}
-        />
+        {storedTheme === "dark" ? (
+          <Image
+            src={DarkBigScreenLayout}
+            alt="Mobile Layout"
+            width={456}
+            height={237}
+          />
+        ) : (
+          <Image
+            src={DarkBigScreenLayout}
+            alt="Mobile Layout"
+            width={456}
+            height={237}
+          />
+        )}
         <BigScreenContent>
           <Image src={filter} alt="Mobile Layout" width={320} height={179} />
         </BigScreenContent>
       </BigScreen>
       <Mobile>
-        <Image
-          src={MobileLayout}
-          alt="BigScreen Layout"
-          width={140}
-          height={230}
-        />
+        {storedTheme === "dark" ? (
+          <Image
+            src={DarkMobileLayout}
+            alt="BigScreen Layout"
+            width={140}
+            height={230}
+          />
+        ) : (
+          <Image
+            src={DarkMobileLayout}
+            alt="BigScreen Layout"
+            width={140}
+            height={230}
+          />
+        )}
         <MobileContent>
           <Image
             src={PreviewAnimation}

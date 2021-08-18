@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^3.0.0",
+    "@svgr/webpack": "^5.5.0",
     "@types/react": "17.0.16",
     "@types/styled-components": "^5.1.12",
     "babel-plugin-styled-components": "^1.13.2",
