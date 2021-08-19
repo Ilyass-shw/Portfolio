@@ -1,5 +1,6 @@
 import React from "react";
 import DarkMobileLayout from "../../assets/DarkMobile.svg";
+import WhiteMobileLayout from "../../assets/WhiteMobile.svg";
 import DarkBigScreenLayout from "../../assets/DarkBigScreen.svg";
 import WhiteBigScreenLayout from "../../assets/WhiteBigScreen.svg";
 import filter from "../../assets/filter.gif";
@@ -12,32 +13,32 @@ import {
   BigScreen,
 } from "./LayoutPreview.component";
 import Image from "next/image";
-import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 const LayoutPreview: React.FC = () => {
-  const [storedTheme] = useLocalStorage();
   const theme =
     typeof window !== "undefined"
       ? JSON.parse(localStorage.getItem("theme") as string)
       : "dark";
-  console.log(theme);
-  console.log(storedTheme);
   return (
     <Layouts>
       <BigScreen>
-        {storedTheme === "dark" ? (
+        {theme === "dark" ? (
           <Image
             src={DarkBigScreenLayout}
             alt="Mobile Layout"
             width={456}
             height={237}
+            z-index={5}
+            over
           />
         ) : (
           <Image
-            src={DarkBigScreenLayout}
+            src={WhiteBigScreenLayout}
             alt="Mobile Layout"
             width={456}
             height={237}
+            z-index={5}
+            over
           />
         )}
         <BigScreenContent>
@@ -45,7 +46,7 @@ const LayoutPreview: React.FC = () => {
         </BigScreenContent>
       </BigScreen>
       <Mobile>
-        {storedTheme === "dark" ? (
+        {theme === "dark" ? (
           <Image
             src={DarkMobileLayout}
             alt="BigScreen Layout"
@@ -54,10 +55,12 @@ const LayoutPreview: React.FC = () => {
           />
         ) : (
           <Image
-            src={DarkMobileLayout}
+            src={WhiteMobileLayout}
             alt="BigScreen Layout"
             width={140}
             height={230}
+            z-index={5}
+            over
           />
         )}
         <MobileContent>
@@ -66,6 +69,8 @@ const LayoutPreview: React.FC = () => {
             alt="Mobile Layout"
             width={115}
             height={165}
+            z-index={5}
+            over
           />
         </MobileContent>
       </Mobile>
