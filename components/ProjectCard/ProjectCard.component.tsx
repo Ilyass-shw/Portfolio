@@ -54,3 +54,10 @@ export const ListItem = styled.li`
   list-style-type: none;
   font-size: 12px;
 `;
+
+export const Iframe = styled.iframe`
+  height: 50vw;
+  @media (min-width: ${(p) => p.theme.screens.lg}) {
+    height: 27vw;
+  }
+`;
