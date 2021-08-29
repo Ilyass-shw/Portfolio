@@ -3,7 +3,7 @@ import { ThemeType } from "../../theme/themes";
 
 export const HeaderNav = styled.nav<{ theme: ThemeType }>`
   height: 5rem;
-  margin-inline-start: -15%;
+  margin-inline-start: -5%;
   display: flex;
   align-items: center;
   align-self: center;
@@ -20,7 +20,9 @@ export const HeaderNav = styled.nav<{ theme: ThemeType }>`
   }
 `;
 
-export const HeaderLinks = styled.ul``;
+export const HeaderLinks = styled.ul`
+
+`;
 
 export const HeaderLink = styled.li`
   background-color: rgb(254, 113, 113);

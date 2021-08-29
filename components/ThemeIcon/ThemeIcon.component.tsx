@@ -7,7 +7,7 @@ export const ThemeIcon = styled.p`
     height: auto;
     position: absolute;
     top: 3.5rem;
-    right: 2rem;
+    right: 1rem;
     cursor: pointer;
 
     @media (min-width: ${(p) => p.theme.screens.sm}) {
