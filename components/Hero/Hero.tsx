@@ -5,8 +5,8 @@ const Hero: React.FC = () => {
   return (  
     <HeroSection>
       <ShortIntro>
-        I&apos;m Ilyass, a passionate programmer and creative developer with a
-        background in Mathematics. I have developed a strong interest.
+        Hi! I&apos;m Ilyass, a passionate programmer and creative developer with a
+        background in Mathematics.
       </ShortIntro>
       <Avatar
         alt="avatar"
