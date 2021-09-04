@@ -11,7 +11,12 @@ const ProfilButtons: React.FC = () => {
       >
         EMAIL ME
       </ProfilBtn>
-      <ProfilBtn background="#2C323D" color="#C1C2C6" hover="#353c4a">
+      <ProfilBtn
+        href="https://drive.google.com/file/d/1EaO5okGoO3DUgWpGKcJ-FtWFnEEn1MIw/view?usp=sharing"
+        background="#2C323D"
+        color="#C1C2C6"
+        hover="#353c4a"
+      >
         RESUME
       </ProfilBtn>
     </Container>
