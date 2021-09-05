@@ -6,8 +6,8 @@ const Header: React.FC = () => {
     <HeaderNav>
       <HeaderLinks>
         <HeaderLink href="/" name="Home" />
-        <HeaderLink href="/#Skills" name="Skills" />
         <HeaderLink href="/#BestProjects" name="Best Projects" />
+        <HeaderLink href="/#Skills" name="Skills" />
       </HeaderLinks>
     </HeaderNav>
   );

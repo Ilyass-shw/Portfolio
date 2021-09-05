@@ -14,7 +14,7 @@ const BestProjects: React.FC = () => {
     <Wrapper>
       <Heading id="BestProjects">Best Projects</Heading>
       <SubHeading>
-        Selection of my best projects that showcase my skills.
+        Selection of my best projects to showcase my skills.
       </SubHeading>
       <Container>
         <>
