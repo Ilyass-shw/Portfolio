@@ -1,22 +1,32 @@
 import React from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import { projects } from "./data";
+import { projects, projectsWithVid } from "./data";
 import {
   Wrapper,
   Heading,
   SubHeading,
   Container,
+  NoVidProjects,
 } from "./BestProjects.component";
 
 const BestProjects: React.FC = () => {
   return (
     <Wrapper>
       <Heading id="BestProjects">Best Projects</Heading>
-      <SubHeading>Collection of personal web dev best projects</SubHeading>
+      <SubHeading>Selection of my best projects that showcase my skills.</SubHeading>
       <Container>
-        {projects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
+        <>
+          {projectsWithVid.map((project) => (
+            <ProjectCard key={project?.id} {...project} />
+          ))}
+          <NoVidProjects>
+            {projects.map((project) => (
+              <>
+                <ProjectCard key={project?.id} {...project} />
+              </>
+            ))}
+          </NoVidProjects>
+        </>
       </Container>
     </Wrapper>
   );

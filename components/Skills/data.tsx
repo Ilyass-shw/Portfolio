@@ -4,12 +4,12 @@ import { Icon } from "@iconify/react";
 export const techSkills = [
   {
     id: 9,
-    name: "Typescript",
+    name: "TypeScript",
     icon: <Icon icon="cib:typescript" width="3.6rem" />,
   },
   {
     id: 2,
-    name: "Javascript (ES6+)",
+    name: "JavaScript ( ES6+ )",
     icon: <Icon icon="akar-icons:javascript-fill" width="3.6rem" />,
   },
   {
@@ -51,12 +51,12 @@ export const techSkills = [
   },
   {
     id: 4,
-    name: "HTML5",
+    name: "HTML 5",
     icon: <Icon icon="fontisto:html5" width="3rem" />,
   },
   {
     id: 5,
-    name: "CSS3",
+    name: "CSS 3",
     icon: <Icon icon="fontisto:css3" width="3rem" />,
   },
 ];

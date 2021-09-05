@@ -9,25 +9,30 @@ import {
   ListItem,
   LinkContainer,
   Link,
-  Iframe
+  Iframe,
+  Video,
 } from "./ProjectCard.component";
 
-interface ProjectCard {
+export interface ProjectCardProps {
   name: string;
+  video?: string;
   description: string;
   techStack: string[];
   github: string;
   appLink: string;
+  key: number | undefined;
 }
-const ProjectCard: React.FC<ProjectCard> = ({
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
   name,
+  video,
   description,
   techStack,
   github,
   appLink,
 }) => {
   return (
-    <CardWrapper>
+    <CardWrapper IsVidPro={video}>
       <ProjectName>{name}</ProjectName>
       <ProjectDescription>{description}</ProjectDescription>
       <List>
@@ -43,13 +48,18 @@ const ProjectCard: React.FC<ProjectCard> = ({
           Live App <Icon icon="akar-icons:link-out" />
         </Link>
       </LinkContainer>
-      <Iframe
-        src="https://www.youtube.com/embed/llFHnH2AJIE"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></Iframe>
+      {video && (
+        <>
+          <Video>Tutorial Video </Video>
+          <Iframe
+            src="https://www.youtube.com/embed/llFHnH2AJIE"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></Iframe>
+        </>
+      )}
     </CardWrapper>
   );
 };

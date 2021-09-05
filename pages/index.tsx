@@ -14,8 +14,8 @@ export default function Home() {
       <main>
         <Header />
         <HeroSection />
-        <Skills />
         <BestProjects />
+        <Skills />
       </main>
 
       <footer></footer>

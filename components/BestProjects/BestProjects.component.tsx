@@ -21,3 +21,14 @@ export const Container = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 `;
+
+export const NoVidProjects = styled.div`
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  @media (min-width: ${(p) => p.theme.screens.lg}) {
+    width: 50%;
+  }
+`;

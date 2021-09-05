@@ -1,16 +1,23 @@
 import styled from "styled-components";
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.div<{ IsVidPro: string | undefined }>`
   background: ${(p) => p.theme.colors.elements};
   padding: 20px;
   display: flex;
-  width: 49%;
+  width: ${(p) => (p.IsVidPro == "" ? `37.4vw;` : `49%;`)};
   flex-direction: column;
   border-radius: 3px;
-  margin: 10px 0;
+  ${(p) => p.IsVidPro == "" && `flex-grow: 1;`}
+  ${(p) =>
+    p.IsVidPro == "" &&
+    `    justify-content: center;
+`}
+  margin: 6px 0;
+  height: fit-content;
 
   @media (max-width: ${(p) => p.theme.screens.lg}) {
     width: 100%;
+    margin: 10px 0;
   }
 `;
 
@@ -60,4 +67,8 @@ export const Iframe = styled.iframe`
   @media (min-width: ${(p) => p.theme.screens.lg}) {
     height: 27vw;
   }
+`;
+
+export const Video = styled.h4`
+  margin-bottom: 5px;
 `;
