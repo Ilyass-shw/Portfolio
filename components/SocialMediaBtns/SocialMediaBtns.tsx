@@ -14,7 +14,7 @@ const SocialMediaBtns: React.FC = () => {
         <Icon icon="ant-design:github-outlined" />
       </Link>
       <Link
-        href={"https://github.com/Ilyass-shw"}
+        href={"https://www.linkedin.com/in/ilyass-shw/"}
         aria-label={`Github Link Icon`}
         target="_blank"
         rel="noreferrer"
